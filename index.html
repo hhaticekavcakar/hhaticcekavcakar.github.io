@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- What appears in the browser tab and in Google results -->
+  <title>Hatice Kavçakar | Industrial Engineering Student</title>
+  <meta name="description" content="Personal website of Hatice Kavçakar, fourth-year Industrial Engineering student at Yaşar University, İzmir. Education, internship experience, academic projects in simulation and process optimization, skills and CV.">
+
+  <!-- What appears when the link is shared on LinkedIn, WhatsApp, etc. -->
+  <meta property="og:title" content="Hatice Kavçakar | Industrial Engineering Student">
+  <meta property="og:description" content="Industrial Engineering student at Yaşar University. Education, experience, academic projects and CV.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="layout">
+
+    <!-- ============================================================
+         SIDEBAR: on desktop it stays fixed on the left;
+         on mobile it becomes the top bar with a menu button.
+         ============================================================ -->
+    <header class="sidebar">
+      <div class="sidebar-top">
+        <a class="identity" href="#about">
+          <!-- Profile photo. To use your own: upload it as assets/images/profile.jpg
+               and change "profile.svg" to "profile.jpg" below.
+               Delete the whole <img> line if you prefer no photo. -->
+          <img class="avatar" src="assets/images/profile.svg" alt="Photo of Hatice Kavçakar" width="96" height="96">
+          <span class="identity-text">
+            <span class="name">Hatice Kavçakar</span>
+            <span class="role">Industrial Engineering student, Yaşar University</span>
+          </span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="sidebar-panel">
+          <span class="menu-toggle-bar" aria-hidden="true"></span>
+          <span class="visually-hidden">Open menu</span>
+        </button>
+      </div>
+
+      <div class="sidebar-panel" id="sidebar-panel">
+        <nav class="site-nav" aria-label="Sections">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Academic projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-actions">
+          <a class="button button-primary" href="documents/CV.pdf" target="_blank" rel="noopener">View CV (PDF)</a>
+          <!-- LinkedIn and GitHub stay hidden until you replace the [ ... ] with your real links. -->
+          <ul class="profile-links">
+            <li><a href="https://www.linkedin.com/in/hatice-kav%C3%A7akar-7408322b6/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/hhaticekavcakar" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="mailto:h.haticekavcakar@gmail.com">h.haticekavcakar@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="content">
+
+      <!-- ============================================================
+           ABOUT
+           ============================================================ -->
+      <section id="about" class="section about">
+        <h1 class="about-heading">Hatice Kavçakar</h1>
+        <p class="about-lead">
+          Fourth-year Industrial Engineering student at Yaşar University, İzmir, expected to graduate in 2027.
+        </p>
+        <p>
+          I have hands-on manufacturing experience in production planning, quality control and
+          cost analysis. I work with Python, Excel, Arena Simulation and optimization tools, and my
+          academic projects cover discrete-event simulation, process optimization and data-driven
+          decision making.
+        </p>
+        <dl class="facts">
+          <!-- Optional: uncomment and fill in to tell recruiters what you are looking for.
+          <div>
+            <dt>Looking for</dt>
+            <dd>[e.g. Full-time role / internship in ...]</dd>
+          </div>
+          -->
+          <div>
+            <dt>Location</dt>
+            <dd>İzmir, Türkiye</dd>
+          </div>
+          <div>
+            <dt>Languages</dt>
+            <dd>English (B2), German (A2)</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- ============================================================
+           EDUCATION
+           ============================================================ -->
+      <section id="education" class="section" aria-labelledby="education-title">
+        <h2 id="education-title">Education</h2>
+
+        <article class="entry">
+          <p class="entry-date">2022 – Present</p>
+          <div class="entry-body">
+            <h3>B.Sc. in Industrial Engineering</h3>
+            <p class="entry-place">Yaşar University, İzmir, Türkiye</p>
+            <ul class="entry-details">
+              <li>Expected graduation: 2027</li>
+              <li>GPA: 3.19 / 4.00</li>
+              <li>Relevant courses: IE 3511 Systems Simulation, IE 3524 Integrated Manufacturing Systems, IE 4563 Total Quality Management</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="entry-date">Certification</p>
+          <div class="entry-body">
+            <h3>Project Management</h3>
+            <p class="entry-place">BTK Akademi</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- ============================================================
+           ACADEMIC PROJECTS
+           Each project is one <article class="project">.
+           Images and videos: upload a file with the EXACT name used below
+           (e.g. assets/images/airport-simulation-1.png) and it appears
+           automatically. Until then, the image/video area stays hidden.
+           ============================================================ -->
+      <section id="projects" class="section" aria-labelledby="projects-title">
+        <h2 id="projects-title">Academic projects</h2>
+        <p class="section-intro">Course projects completed at Yaşar University.</p>
+
+        <!-- ---------- PROJECT 1 ---------- -->
+        <article class="project">
+          <header class="project-header">
+            <h3>Regional Airport Passenger Flow Simulation</h3>
+            <p class="project-meta">
+              <span>IE 3511 Systems Simulation</span>
+              <!-- Optional: add the term and team size, e.g.
+              <span>Spring 2025</span>
+              <span>Team of 4</span>
+              -->
+            </p>
+          </header>
+
+          <!-- Up to two images. Recommended: a screenshot of the Arena model
+               and a chart comparing the scenarios. Use .png or .jpg and
+               update the names below if yours differ. -->
+          <div class="gallery">
+            <figure class="gallery-main">
+              <img class="contain" src="assets/images/airport-simulation-1.png" alt="Arena model of the airport departure process" loading="lazy">
+              <figcaption>Arena model of the departure process, from check-in to gate access</figcaption>
+            </figure>
+            <div class="gallery-thumbs" role="list">
+              <button type="button" class="thumb" role="listitem" aria-current="true"
+                      data-src="assets/images/airport-simulation-1.png"
+                      data-alt="Arena model of the airport departure process"
+                      data-caption="Arena model of the departure process, from check-in to gate access">
+                <img src="assets/images/airport-simulation-1.png" alt="" loading="lazy">
+              </button>
+              <button type="button" class="thumb" role="listitem"
+                      data-src="assets/images/airport-simulation-2.png"
+                      data-alt="Comparison of the six improvement scenarios"
+                      data-caption="Comparison of the six improvement scenarios">
+                <img src="assets/images/airport-simulation-2.png" alt="" loading="lazy">
+              </button>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <p>A discrete-event simulation of a regional airport's departure system, covering the
+            passenger journey through check-in, baggage drop, security screening and gate access.
+            The model was used to compare improvement scenarios under a fixed investment budget.</p>
+
+            <h4>My contribution</h4>
+            <ul>
+              <li>Developed the discrete-event simulation of the airport departure system in Arena.</li>
+              <li>Evaluated six improvement scenarios under a fixed investment budget.</li>
+              <li>Identified strategies that substantially reduced the simulated missed-flight rate.</li>
+            </ul>
+
+            <h4>Tools and methods</h4>
+            <ul class="tags">
+              <li>Arena Simulation</li>
+              <li>Discrete-event simulation</li>
+              <li>Scenario analysis</li>
+            </ul>
+          </div>
+
+          <!-- Optional video: upload it as assets/videos/airport-simulation.mp4
+               (under 25 MB). It stays hidden until the file exists. -->
+          <figure class="project-video">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/videos/airport-simulation.mp4" type="video/mp4">
+              Your browser cannot play this video.
+            </video>
+            <figcaption>Simulation run in Arena</figcaption>
+          </figure>
+
+          <!-- Optional links: replace the [ ... ] with a real link; links still in [ ... ] stay hidden.
+               For a report, upload the PDF to documents/ and use e.g. documents/airport-simulation-report.pdf -->
+          <ul class="project-links">
+            <li><a href="[PROJECT 1 REPORT LINK]" target="_blank" rel="noopener">Project report (PDF)</a></li>
+            <li><a href="[PROJECT 1 PRESENTATION LINK]" target="_blank" rel="noopener">Presentation slides (PDF)</a></li>
+          </ul>
+        </article>
+
+        <!-- ---------- PROJECT 2 ---------- -->
+        <article class="project">
+          <header class="project-header">
+            <h3>Converting Process Analysis and Optimization, Alkim Kağıt</h3>
+            <p class="project-meta">
+              <span>IE 3524 Integrated Manufacturing Systems</span>
+              <!-- Optional: <span>Term</span> <span>Team size</span> -->
+            </p>
+          </header>
+
+          <!-- Optional image, e.g. a process flow or the Solver model.
+               Check with the company before publishing photos taken on site. -->
+          <div class="gallery">
+            <figure class="gallery-main">
+              <img class="contain" src="assets/images/alkim-converting-1.png" alt="Slitting process analysis and optimization model" loading="lazy">
+              <figcaption>Slitting process analysis</figcaption>
+            </figure>
+          </div>
+
+          <div class="project-body">
+            <p>An analysis of the paper slitting process at Alkim Kağıt, aimed at reducing trim loss and
+            setup time by improving how rolls are cut and sequenced.</p>
+
+            <h4>My contribution</h4>
+            <ul>
+              <li>Analyzed the paper slitting process.</li>
+              <li>Built an Excel Solver linear programming model and a 2×2 Design of Experiments to evaluate cutting and sequencing strategies.</li>
+            </ul>
+
+            <h4>Results</h4>
+            <ul>
+              <li>Trim loss reduced from 4.50% to 4.20%.</li>
+              <li>Setup time reduced from 105 to 45 minutes (57% reduction).</li>
+            </ul>
+
+            <h4>Tools and methods</h4>
+            <ul class="tags">
+              <li>Excel Solver</li>
+              <li>Linear programming</li>
+              <li>Design of Experiments</li>
+              <li>Process analysis</li>
+            </ul>
+          </div>
+
+          <ul class="project-links">
+            <li><a href="[PROJECT 2 REPORT LINK]" target="_blank" rel="noopener">Project report (PDF)</a></li>
+          </ul>
+        </article>
+
+        <!-- ---------- PROJECT 3 ---------- -->
+        <article class="project">
+          <header class="project-header">
+            <h3>Tupperware Bankruptcy Analysis</h3>
+            <p class="project-meta">
+              <span>IE 4563 Total Quality Management</span>
+            </p>
+          </header>
+
+          <div class="project-body">
+            <p>A case analysis of Tupperware's decline, examined through Total Quality Management principles.</p>
+
+            <h4>My contribution</h4>
+            <ul>
+              <li>Analyzed Tupperware's decline through TQM principles, focusing on leadership, change management and customer orientation.</li>
+            </ul>
+
+            <h4>Tools and methods</h4>
+            <ul class="tags">
+              <li>Total Quality Management</li>
+              <li>Case analysis</li>
+            </ul>
+          </div>
+
+          <ul class="project-links">
+            <li><a href="[PROJECT 3 REPORT LINK]" target="_blank" rel="noopener">Report (PDF)</a></li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- ============================================================
+           SKILLS
+           ============================================================ -->
+      <section id="skills" class="section" aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills</h2>
+        <dl class="skills">
+          <div>
+            <dt>Software</dt>
+            <dd>Python, Microsoft Excel, Excel Solver, Arena Simulation, LINGO</dd>
+          </div>
+          <div>
+            <dt>Production and quality</dt>
+            <dd>Production Planning, Quality Control, Process Improvement, Pareto Analysis, KPI Tracking, Time Study, Total Quality Management</dd>
+          </div>
+          <div>
+            <dt>Modelling and analysis</dt>
+            <dd>Discrete-Event Simulation, Scenario Analysis, Linear Programming, Design of Experiments</dd>
+          </div>
+          <div>
+            <dt>Languages</dt>
+            <dd>English (B2), German (A2)</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- ============================================================
+           EXPERIENCE
+           ============================================================ -->
+      <section id="experience" class="section" aria-labelledby="experience-title">
+        <h2 id="experience-title">Experience</h2>
+
+        <article class="entry">
+          <p class="entry-date">June 2026</p>
+          <div class="entry-body">
+            <h3>Industrial Engineering Intern</h3>
+            <p class="entry-place">GİMAS Girgin Machinery, İzmir, Türkiye</p>
+            <ul class="entry-details">
+              <li>Analyzed nonconformity, rework and scrap-cost data using Pareto analysis to identify major sources of quality-related costs.</li>
+              <li>Monitored production and quality KPIs in Excel to support process improvement initiatives.</li>
+              <li>Gained cross-functional exposure to production planning, quality control, non-destructive testing (NDT), warehouse operations and purchasing across welding, machining and assembly processes.</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <!-- ============================================================
+           CV
+           Put your CV at documents/CV.pdf (exact name, capital C and V).
+           ============================================================ -->
+      <section id="cv" class="section" aria-labelledby="cv-title">
+        <h2 id="cv-title">CV</h2>
+        <p>My full CV is available as a PDF.</p>
+        <!-- Optional: <p class="cv-meta">Last updated: Month Year</p> -->
+        <div class="button-row">
+          <a class="button button-primary" href="documents/CV.pdf" target="_blank" rel="noopener">Open CV</a>
+          <!-- "download" makes the browser save the file instead of opening it. -->
+          <a class="button" href="documents/CV.pdf" download="Hatice-Kavcakar-CV.pdf">Download CV</a>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CONTACT
+           ============================================================ -->
+      <section id="contact" class="section" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <p>The quickest way to reach me is by email.</p>
+        <dl class="contact-list">
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:h.haticekavcakar@gmail.com">h.haticekavcakar@gmail.com</a></dd>
+          </div>
+          <div>
+            <dt>LinkedIn</dt>
+            <dd><a href="https://www.linkedin.com/in/hatice-kav%C3%A7akar-7408322b6/" target="_blank" rel="noopener">LinkedIn profile</a></dd>
+          </div>
+          <div>
+            <dt>GitHub</dt>
+            <dd><a href="https://github.com/hhaticekavcakar" target="_blank" rel="noopener">GitHub profile</a></dd>
+          </div>
+        </dl>
+      </section>
+
+      <footer class="site-footer">
+        <p>&copy; <span id="year">2026</span> Hatice Kavçakar. Built with HTML and CSS, hosted on GitHub Pages.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
