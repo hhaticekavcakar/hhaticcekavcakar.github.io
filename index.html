@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- What appears in the browser tab and in Google results -->
+  <title>[NAME] | [DEPARTMENT] Student</title>
+  <meta name="description" content="Personal website of [NAME], [DEPARTMENT] student at [UNIVERSITY]. Education, academic projects, skills and CV.">
+
+  <!-- What appears when the link is shared on LinkedIn, WhatsApp, etc. -->
+  <meta property="og:title" content="[NAME] | [DEPARTMENT] Student">
+  <meta property="og:description" content="Education, academic projects, skills and CV.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="layout">
+
+    <!-- ============================================================
+         SIDEBAR: on desktop it stays fixed on the left;
+         on mobile it becomes the top bar with a menu button.
+         ============================================================ -->
+    <header class="sidebar">
+      <div class="sidebar-top">
+        <a class="identity" href="#about">
+          <!-- Optional photo. Replace assets/images/profile.svg with your photo
+               (e.g. profile.jpg) and update the src below.
+               Delete the whole <img> line if you prefer no photo. -->
+          <img class="avatar" src="assets/images/profile.svg" alt="Photo of [NAME]" width="96" height="96">
+          <span class="identity-text">
+            <span class="name">[NAME]</span>
+            <span class="role">[DEPARTMENT] student, [UNIVERSITY]</span>
+          </span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="sidebar-panel">
+          <span class="menu-toggle-bar" aria-hidden="true"></span>
+          <span class="visually-hidden">Open menu</span>
+        </button>
+      </div>
+
+      <div class="sidebar-panel" id="sidebar-panel">
+        <nav class="site-nav" aria-label="Sections">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Academic projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-actions">
+          <a class="button button-primary" href="documents/CV.pdf" target="_blank" rel="noopener">View CV (PDF)</a>
+          <ul class="profile-links">
+            <li><a href="[LINKEDIN URL]" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="[GITHUB URL]" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="mailto:[EMAIL]">[EMAIL]</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="content">
+
+      <!-- ============================================================
+           ABOUT
+           ============================================================ -->
+      <section id="about" class="section about">
+        <h1 class="about-heading">[NAME]</h1>
+        <p class="about-lead">
+          [DEGREE, e.g. B.Sc.] student in [DEPARTMENT] at [UNIVERSITY], expected to graduate in [GRADUATION MONTH YEAR].
+        </p>
+        <p>
+          [ABOUT ME: 2–4 sentences. Which areas of engineering interest you, what kind of
+          problems you enjoy working on, and what you are looking for, e.g. a summer
+          internship in a specific field. Keep it consistent with the summary on your CV.]
+        </p>
+        <dl class="facts">
+          <div>
+            <dt>Looking for</dt>
+            <dd>[e.g. Summer 2027 internship in ...]</dd>
+          </div>
+          <div>
+            <dt>Location</dt>
+            <dd>[CITY, COUNTRY]</dd>
+          </div>
+          <div>
+            <dt>Languages</dt>
+            <dd>[LANGUAGE (LEVEL)], [LANGUAGE (LEVEL)]</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- ============================================================
+           EDUCATION
+           Copy one <article class="entry"> block per school/degree.
+           ============================================================ -->
+      <section id="education" class="section" aria-labelledby="education-title">
+        <h2 id="education-title">Education</h2>
+
+        <article class="entry">
+          <p class="entry-date">[START YEAR] – [END YEAR or "Present"]</p>
+          <div class="entry-body">
+            <h3>[DEGREE] in [DEPARTMENT]</h3>
+            <p class="entry-place">[UNIVERSITY], [CITY]</p>
+            <ul class="entry-details">
+              <li>GPA: [GPA] / [GPA SCALE]  <!-- delete this line if you prefer not to show GPA --></li>
+              <li>Relevant courses: [COURSE], [COURSE], [COURSE], [COURSE]</li>
+              <li>[HONOURS, SCHOLARSHIP, EXCHANGE PROGRAMME OR CLUB ROLE, if any]</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Optional second entry (high school, exchange semester, etc.). Delete if not needed. -->
+        <article class="entry">
+          <p class="entry-date">[START YEAR] – [END YEAR]</p>
+          <div class="entry-body">
+            <h3>[SECOND SCHOOL OR PROGRAMME]</h3>
+            <p class="entry-place">[INSTITUTION], [CITY]</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- ============================================================
+           ACADEMIC PROJECTS
+           Each project is one <article class="project">.
+           To add a project: copy a whole <article class="project"> ... </article> block.
+           Every part marked OPTIONAL can be deleted without breaking the layout.
+           ============================================================ -->
+      <section id="projects" class="section" aria-labelledby="projects-title">
+        <h2 id="projects-title">Academic projects</h2>
+        <p class="section-intro">Projects completed as part of my coursework at [UNIVERSITY].</p>
+
+        <!-- ---------- PROJECT 1: example with several images and a video ---------- -->
+        <article class="project">
+          <header class="project-header">
+            <h3>[PROJECT TITLE 1]</h3>
+            <p class="project-meta">
+              <span>[COURSE CODE] [COURSE NAME]</span>
+              <span>[TERM, e.g. Spring 2026]</span>
+              <span>[Individual / Team of N]</span>
+            </p>
+          </header>
+
+          <!-- Images: the first image is shown large. If you add more than one,
+               thumbnails appear below it and clicking one swaps the large image.
+               Any image size works; it is cropped to a 16:10 frame. -->
+          <div class="gallery">
+            <figure class="gallery-main">
+              <img src="assets/images/project-1-a.svg" alt="[DESCRIBE IMAGE 1, e.g. Final prototype on the test bench]" loading="lazy">
+              <figcaption>[CAPTION FOR IMAGE 1]</figcaption>
+            </figure>
+            <div class="gallery-thumbs" role="list">
+              <button type="button" class="thumb" role="listitem" aria-current="true"
+                      data-src="assets/images/project-1-a.svg"
+                      data-alt="[DESCRIBE IMAGE 1, e.g. Final prototype on the test bench]"
+                      data-caption="[CAPTION FOR IMAGE 1]">
+                <img src="assets/images/project-1-a.svg" alt="" loading="lazy">
+              </button>
+              <button type="button" class="thumb" role="listitem"
+                      data-src="assets/images/project-1-b.svg"
+                      data-alt="[DESCRIBE IMAGE 2, e.g. System block diagram]"
+                      data-caption="[CAPTION FOR IMAGE 2]">
+                <img src="assets/images/project-1-b.svg" alt="" loading="lazy">
+              </button>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <p>[PROJECT DESCRIPTION: 2–3 sentences. What problem did the project address,
+            what was built or analysed, and what was the outcome?]</p>
+
+            <h4>My contribution</h4>
+            <ul>
+              <li>[WHAT YOU DID, e.g. Designed the ... and implemented ...]</li>
+              <li>[WHAT YOU DID, e.g. Ran ... tests and compared results with ...]</li>
+              <li>[RESULT, e.g. Reduced ... by X% / achieved ... ]</li>
+            </ul>
+
+            <h4>Tools and methods</h4>
+            <ul class="tags">
+              <li>[TOOL]</li>
+              <li>[LANGUAGE]</li>
+              <li>[SOFTWARE]</li>
+              <li>[METHOD]</li>
+            </ul>
+          </div>
+
+          <!-- OPTIONAL video stored in your repository (MP4, keep it under ~25 MB).
+               If the file does not exist yet, script.js hides this block automatically. -->
+          <figure class="project-video">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/videos/project-1-demo.mp4" type="video/mp4">
+              Your browser cannot play this video.
+            </video>
+            <figcaption>[VIDEO CAPTION, e.g. Demonstration of the working system]</figcaption>
+          </figure>
+
+          <!-- OPTIONAL links: delete any line you don't need. -->
+          <ul class="project-links">
+            <li><a href="[GITHUB REPOSITORY URL]" target="_blank" rel="noopener">GitHub repository</a></li>
+            <li><a href="documents/[PROJECT-1-REPORT].pdf" target="_blank" rel="noopener">Project report (PDF)</a></li>
+            <li><a href="documents/[PROJECT-1-PRESENTATION].pdf" target="_blank" rel="noopener">Presentation slides (PDF)</a></li>
+          </ul>
+        </article>
+
+        <!-- ---------- PROJECT 2: example with one image and a YouTube video ---------- -->
+        <article class="project">
+          <header class="project-header">
+            <h3>[PROJECT TITLE 2]</h3>
+            <p class="project-meta">
+              <span>[COURSE CODE] [COURSE NAME]</span>
+              <span>[TERM]</span>
+              <span>[Individual / Team of N]</span>
+            </p>
+          </header>
+
+          <div class="gallery">
+            <figure class="gallery-main">
+              <img src="assets/images/project-2.svg" alt="[DESCRIBE THE IMAGE]" loading="lazy">
+              <figcaption>[CAPTION]</figcaption>
+            </figure>
+          </div>
+
+          <div class="project-body">
+            <p>[PROJECT DESCRIPTION]</p>
+
+            <h4>My contribution</h4>
+            <ul>
+              <li>[WHAT YOU DID]</li>
+              <li>[WHAT YOU DID]</li>
+            </ul>
+
+            <h4>Tools and methods</h4>
+            <ul class="tags">
+              <li>[TOOL]</li>
+              <li>[TOOL]</li>
+              <li>[METHOD]</li>
+            </ul>
+          </div>
+
+          <!-- OPTIONAL YouTube video (good for large videos).
+               1. Upload the video to YouTube (it can be "Unlisted").
+               2. Copy the ID from the link: youtube.com/watch?v=THIS_PART
+               3. Remove the comment markers around the block below and paste the ID. -->
+          <!--
+          <div class="video-embed">
+            <iframe src="https://www.youtube-nocookie.com/embed/[YOUTUBE VIDEO ID]"
+                    title="[VIDEO TITLE]" loading="lazy"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+          </div>
+          -->
+
+          <ul class="project-links">
+            <li><a href="[GITHUB REPOSITORY URL]" target="_blank" rel="noopener">GitHub repository</a></li>
+            <li><a href="documents/[PROJECT-2-REPORT].pdf" target="_blank" rel="noopener">Project report (PDF)</a></li>
+          </ul>
+        </article>
+
+        <!-- ---------- PROJECT 3: example with no media at all ---------- -->
+        <article class="project">
+          <header class="project-header">
+            <h3>[PROJECT TITLE 3]</h3>
+            <p class="project-meta">
+              <span>[COURSE CODE] [COURSE NAME]</span>
+              <span>[TERM]</span>
+            </p>
+          </header>
+
+          <div class="project-body">
+            <p>[PROJECT DESCRIPTION]</p>
+
+            <h4>My contribution</h4>
+            <ul>
+              <li>[WHAT YOU DID]</li>
+            </ul>
+
+            <h4>Tools and methods</h4>
+            <ul class="tags">
+              <li>[TOOL]</li>
+              <li>[METHOD]</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <!-- ============================================================
+           SKILLS
+           Keep this consistent with the skills section of your CV.
+           ============================================================ -->
+      <section id="skills" class="section" aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills</h2>
+        <dl class="skills">
+          <div>
+            <dt>Programming</dt>
+            <dd>[e.g. LANGUAGE, LANGUAGE, LANGUAGE]</dd>
+          </div>
+          <div>
+            <dt>Engineering software</dt>
+            <dd>[e.g. SOFTWARE, SOFTWARE]</dd>
+          </div>
+          <div>
+            <dt>Methods</dt>
+            <dd>[e.g. METHOD, METHOD]</dd>
+          </div>
+          <div>
+            <dt>Tools</dt>
+            <dd>[e.g. TOOL, TOOL]</dd>
+          </div>
+          <div>
+            <dt>Languages</dt>
+            <dd>[LANGUAGE (LEVEL)], [LANGUAGE (LEVEL)]</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- ============================================================
+           EXPERIENCE (optional)
+           No internship or job yet? Delete this whole <section>.
+           The "Experience" menu link disappears automatically.
+           Student clubs, volunteering, teaching assistant roles and
+           competitions can also go here, but only if they are real.
+           ============================================================ -->
+      <section id="experience" class="section" aria-labelledby="experience-title">
+        <h2 id="experience-title">Experience</h2>
+
+        <article class="entry">
+          <p class="entry-date">[MONTH YEAR] – [MONTH YEAR]</p>
+          <div class="entry-body">
+            <h3>[ROLE]</h3>
+            <p class="entry-place">[ORGANISATION], [CITY]</p>
+            <ul class="entry-details">
+              <li>[WHAT YOU DID]</li>
+              <li>[WHAT YOU DID]</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <!-- ============================================================
+           CV
+           Put your CV at documents/CV.pdf (exact name, capital C and V).
+           ============================================================ -->
+      <section id="cv" class="section" aria-labelledby="cv-title">
+        <h2 id="cv-title">CV</h2>
+        <p>My full CV, including the details summarised on this page, is available as a PDF.</p>
+        <p class="cv-meta">Last updated: [MONTH YEAR]</p>
+        <div class="button-row">
+          <a class="button button-primary" href="documents/CV.pdf" target="_blank" rel="noopener">Open CV</a>
+          <!-- "download" makes the browser save the file instead of opening it. -->
+          <a class="button" href="documents/CV.pdf" download="[NAME]-CV.pdf">Download CV</a>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CONTACT
+           ============================================================ -->
+      <section id="contact" class="section" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <p>The quickest way to reach me is by email. I usually reply within [two days].</p>
+        <dl class="contact-list">
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:[EMAIL]">[EMAIL]</a></dd>
+          </div>
+          <div>
+            <dt>LinkedIn</dt>
+            <dd><a href="[LINKEDIN URL]" target="_blank" rel="noopener">[LINKEDIN URL]</a></dd>
+          </div>
+          <div>
+            <dt>GitHub</dt>
+            <dd><a href="[GITHUB URL]" target="_blank" rel="noopener">[GITHUB URL]</a></dd>
+          </div>
+        </dl>
+      </section>
+
+      <footer class="site-footer">
+        <p>&copy; <span id="year">2026</span> [NAME]. Built with HTML and CSS, hosted on GitHub Pages.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
